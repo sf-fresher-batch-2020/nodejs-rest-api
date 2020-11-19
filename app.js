@@ -2,13 +2,13 @@ const express = require('express')
 
 const app = express()
 app.use(express.json())
-const port = process.env.port | 3000
+const port = process.env.port || 5000
 
 
 const mysql = require("mysql2/promise");
 
 const pool = mysql.createPool({
-    host: process.env.DATABASE_URL | "localhost",
+    host: process.env.DATABASE_URL || "localhost",
     port: 3306,
     user: "naresh",
     password: "naresh",
