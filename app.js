@@ -44,7 +44,7 @@ let createUserSchema = async function (req,res,next){
     
 }
 
-
+app.get("/", (req,res)=> res.send({message:"Working"}))
 app.post('/api/users', createUserSchema, createUser);
 app.get("/api/users", getAllUsers);
 
