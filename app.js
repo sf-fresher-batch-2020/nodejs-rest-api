@@ -8,11 +8,11 @@ const port = 3000
 const mysql = require("mysql2/promise");
 
 const pool = mysql.createPool({
-    host: "localhost",
+    host: process.env.DATABASE_URL,
     port: 3306,
-    user: "root",
-    password: "root",
-    database: "training_db",
+    user: "naresh",
+    password: "naresh",
+    database: "naresh_db",
     connectionLimit: 10
 });
 
