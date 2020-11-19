@@ -157,4 +157,12 @@ async function getAllUsers(req,res){
     res.status(200).json(users);
 }
 
-app.listen(port, () => console.log(`Example app listening on port port!`, port ))
+
+// Create Commmon Error Handler
+app.use(function (err, req, res, next) {
+    console.log("common error handler")
+    console.error(err);
+    res.json({message:err.message});
+})
+
+app.listen(port, () => console.log(`Example app listening on port!`, port ))
