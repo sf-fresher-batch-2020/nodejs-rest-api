@@ -10,11 +10,11 @@ const mysql = require("mysql2/promise");
 console.log(process.env.DATABASE_URL);
 
 const pool = mysql.createPool({
-    host: process.env.DATABASE_URL || "localhost",
+    host: process.env.DB_URL || "localhost",
     port:  3306,
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "root",
-    database: process.env.DATABASE_NAME || "training_db",
+    database: process.env.DB_NAME || "training_db",
     connectionLimit: 1
 });
 
