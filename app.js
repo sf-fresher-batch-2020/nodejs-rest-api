@@ -7,7 +7,6 @@ const port = process.env.port || 5000
 
 
 const mysql = require("mysql2/promise");
-console.log(process.env.DATABASE_URL);
 
 const pool = mysql.createPool({
     host: process.env.DB_URL || "localhost",
