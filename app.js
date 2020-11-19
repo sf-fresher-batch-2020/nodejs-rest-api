@@ -3,10 +3,11 @@ const jwt = require('jsonwebtoken')
 const TOKEN_SECRET = "7bc78545b1a3923cc1e1e19523fd5c3f20b409509";
 const app = express()
 app.use(express.json())
-const port = process.env.port || 5000
-const host = process.env.host || '0.0.0.0';
+const port = process.env.PORT || 5000
+
 
 const mysql = require("mysql2/promise");
+
 
 const pool = mysql.createPool({
     host: process.env.DB_URL || "localhost",
@@ -156,4 +157,4 @@ async function getAllUsers(req,res){
     res.status(200).json(users);
 }
 
-app.listen(port, host, () => console.log(`Example app listening on port port!`, port ))
+app.listen(port, () => console.log(`Example app listening on port port!`, port ))
