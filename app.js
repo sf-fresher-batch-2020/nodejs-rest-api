@@ -67,4 +67,4 @@ async function getAllUsers(req,res){
     res.status(200).json(users);
 }
 
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`Example app listening on port port!`, port ))
