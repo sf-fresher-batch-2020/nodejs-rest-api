@@ -162,7 +162,7 @@ async function getAllUsers(req,res){
 app.use(function (err, req, res, next) {
     console.log("common error handler")
     console.error(err);
-    res.json({message:err.message});
+    res.status(500).json({message:err.message});
 })
 
 app.listen(port, () => console.log(`Example app listening on port!`, port ))
