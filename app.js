@@ -97,7 +97,7 @@ let loginUserSchema = async function(req,res,next){
         
 }
 
-app.get("/", (req,res)=> res.send({message:"Working"}))
+app.get("/", (req,res)=> res.send({message:"Working with CI/CD"}))
 app.post('/api/users', createUserSchema, createUser);
 app.post("/api/users/login",loginUserSchema, login)
 app.get("/api/users", authenticateToken, getAllUsers);
