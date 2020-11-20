@@ -97,7 +97,7 @@ let loginUserSchema = async function(req,res,next){
         
 }
 
-app.get("/", (req,res)=> res.send({message:"Working with CI/CD"}))
+app.get("/", (req,res)=> res.send({message:"REST API Service is working"}))
 app.post('/api/users', createUserSchema, createUser);
 app.post("/api/users/login",loginUserSchema, login)
 app.get("/api/users", authenticateToken, getAllUsers);
